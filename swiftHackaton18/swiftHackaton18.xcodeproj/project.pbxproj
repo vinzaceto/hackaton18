@@ -12,6 +12,7 @@
 		11D9CE5E214C25240009603B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D9CE5C214C25240009603B /* Main.storyboard */; };
 		11D9CE60214C25260009603B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D9CE5F214C25260009603B /* Assets.xcassets */; };
 		11D9CE63214C25260009603B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D9CE61214C25260009603B /* LaunchScreen.storyboard */; };
+		CFE3E7360BFCE111B9BBEA4D /* Pods_swiftHackaton18.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94A258F9ED66AF7727B7F7B /* Pods_swiftHackaton18.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		11D9CE5F214C25260009603B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11D9CE62214C25260009603B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11D9CE64214C25260009603B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51037735287BE02DFCE23F9B /* Pods-swiftHackaton18.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftHackaton18.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftHackaton18/Pods-swiftHackaton18.release.xcconfig"; sourceTree = "<group>"; };
+		8191B9AACD4D3428F1C70D13 /* Pods-swiftHackaton18.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftHackaton18.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftHackaton18/Pods-swiftHackaton18.debug.xcconfig"; sourceTree = "<group>"; };
+		E94A258F9ED66AF7727B7F7B /* Pods_swiftHackaton18.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftHackaton18.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE3E7360BFCE111B9BBEA4D /* Pods_swiftHackaton18.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				11D9CE57214C25240009603B /* swiftHackaton18 */,
 				11D9CE56214C25240009603B /* Products */,
+				CCFBDA27E956B52B999AAF5F /* Pods */,
+				FC99FC11243E1A8A9E353DB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = swiftHackaton18;
 			sourceTree = "<group>";
 		};
+		CCFBDA27E956B52B999AAF5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8191B9AACD4D3428F1C70D13 /* Pods-swiftHackaton18.debug.xcconfig */,
+				51037735287BE02DFCE23F9B /* Pods-swiftHackaton18.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC99FC11243E1A8A9E353DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E94A258F9ED66AF7727B7F7B /* Pods_swiftHackaton18.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11D9CE67214C25260009603B /* Build configuration list for PBXNativeTarget "swiftHackaton18" */;
 			buildPhases = (
+				5B6059310FEDF76910A3D33A /* [CP] Check Pods Manifest.lock */,
 				11D9CE51214C25240009603B /* Sources */,
 				11D9CE52214C25240009603B /* Frameworks */,
 				11D9CE53214C25240009603B /* Resources */,
+				EB61A6034745545E80DB960F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B6059310FEDF76910A3D33A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftHackaton18-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB61A6034745545E80DB960F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swiftHackaton18/Pods-swiftHackaton18-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftHackaton18/Pods-swiftHackaton18-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11D9CE51214C25240009603B /* Sources */ = {
@@ -278,10 +343,12 @@
 		};
 		11D9CE68214C25260009603B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8191B9AACD4D3428F1C70D13 /* Pods-swiftHackaton18.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E76VR3ED8R;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 34TXQRK79N;
 				INFOPLIST_FILE = swiftHackaton18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,6 +356,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilewolves.swiftHackaton18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "393c9c48-91b5-4793-ba6c-b8ef9870e671";
+				PROVISIONING_PROFILE_SPECIFIER = ALL_ADHOC_ENT;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,10 +365,12 @@
 		};
 		11D9CE69214C25260009603B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51037735287BE02DFCE23F9B /* Pods-swiftHackaton18.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E76VR3ED8R;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 34TXQRK79N;
 				INFOPLIST_FILE = swiftHackaton18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +378,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilewolves.swiftHackaton18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "393c9c48-91b5-4793-ba6c-b8ef9870e671";
+				PROVISIONING_PROFILE_SPECIFIER = ALL_ADHOC_ENT;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
